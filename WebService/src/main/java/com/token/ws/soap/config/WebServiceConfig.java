@@ -31,7 +31,7 @@ public class WebServiceConfig {
 		inProps.put(ConfigurationConstants.ACTION, ConfigurationConstants.USERNAME_TOKEN);
 		inProps.put(ConfigurationConstants.ACTION, ConfigurationConstants.USERNAME_TOKEN);
 		inProps.put(ConfigurationConstants.PW_CALLBACK_CLASS, UTPasswordCallback.class.getName());
-		WSS4JInInterceptor wssIn = new WSS4JInInterceptor();
+		WSS4JInInterceptor wssIn = new WSS4JInInterceptor(inProps);
 		endpoint.getInInterceptors().add(wssIn);
 		
 		
